@@ -24,7 +24,7 @@ import os
 import sys
 import unittest
 from ipykernel.tests.utils import assemble_output, execute
-from sos.jupyter.test_utils import sos_kernel
+from sos_notebook.test_utils import sos_kernel
 
 class TestPreview(unittest.TestCase):
     def setUp(self):
