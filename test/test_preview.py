@@ -23,8 +23,8 @@
 import os
 import sys
 import unittest
-from ipykernel.tests.utils import assemble_output, execute
-from sos_notebook.test_utils import sos_kernel
+from ipykernel.tests.utils import execute
+from sos_notebook.test_utils import sos_kernel, get_std_output
 
 class TestPreview(unittest.TestCase):
     def setUp(self):
@@ -38,7 +38,7 @@ class TestPreview(unittest.TestCase):
             execute(kc=kc, code='''
 %preview -n {}/sim_reads_aligned.bam
 '''.format(self.resource_dir))
-            stdout, stderr = assemble_output(iopub)
+            stdout, stderr = get_std_output(iopub)
             self.assertEqual(stderr, '')
             self.assertTrue('PG' in stdout)
 
@@ -46,7 +46,7 @@ class TestPreview(unittest.TestCase):
             execute(kc=kc, code='''
 %preview -n {}/sim_reads_aligned.sam
 '''.format(self.resource_dir))
-            stdout, stderr = assemble_output(iopub)
+            stdout, stderr = get_std_output(iopub)
             self.assertEqual(stderr, '')
             self.assertTrue('PG' in stdout)
 
