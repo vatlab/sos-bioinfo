@@ -27,6 +27,8 @@ before_install:
     # SoS Notebook
     - pip install jedi notebook nbconvert nbformat pyyaml psutil tqdm scipy
     - pip install pygments ipython wand graphviz sos sos-bash sos-python
+    - pip install sos-notebook
+    - python -m sos_notebook.install
 
     # Bioinfo
     - pip install pysam
