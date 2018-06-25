@@ -40,16 +40,9 @@ install: "pip install . -U"
 before_script:
     - cd test
 script:
-    - pytest -x -v;
+    #- pytest -x -v;
+    - python test_preview.py -v
       
-after_success:
-#    - 'if [ $TRAVIS_PYTHON_VERSION == "3.5" ]; then
-#           coverage combine;
-#           ls -l coverage.xml;
-#           python-codacy-coverage -r coverage.xml;
-#           coveralls;
-#        fi'
-
 notifications:
     email:
         recipients:
