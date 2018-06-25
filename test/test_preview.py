@@ -6,8 +6,8 @@
 import os
 import sys
 import unittest
-from ipykernel.tests.utils import execute
 from sos_notebook.test_utils import sos_kernel, get_std_output
+from ipykernel.tests.utils import execute
 
 class TestPreview(unittest.TestCase):
     def setUp(self):
