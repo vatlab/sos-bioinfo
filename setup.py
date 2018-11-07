@@ -38,7 +38,7 @@ setup(name = "sos-bioinfo",
     packages = find_packages('src'),
     package_dir = {'': 'src'},
     install_requires=[
-        'sos>=0.9.10.1',
+        'sos>=0.17.4',
     ],
     entry_points= '''
 [sos_previewers]
